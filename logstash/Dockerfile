@@ -7,7 +7,4 @@ RUN set -x \
 	  && apt-get install -y --no-install-recommends elasticsearch-curator netcat curl jq \
 	  && rm -rf /var/lib/apt/lists/*
 
-RUN chmod 777 /usr/share/logstash/data/queue \
-    && chown -R logstash:logstash /usr/share/logstash/data
-
 RUN logstash-plugin install logstash-filter-json
