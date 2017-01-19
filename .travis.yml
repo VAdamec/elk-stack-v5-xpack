@@ -12,6 +12,9 @@ install:
   - docker build -t kibana kibana/
   - docker build -t riakcs riakcs/
 
+script:
+  - echo "DONE"
+
 notifications:
   email:
     recipients:
